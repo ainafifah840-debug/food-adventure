@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Food Adventure! – Discover, Guess &amp; Match | Year 5 English</title>
+  <meta name="description" content="An interactive English learning website for Malaysian Year 5 pupils on the topic Food and Health: bilingual flashcards, matching games, speaking practice, listening and quizzes.">
+  <meta name="theme-color" content="#B9DDBB">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ================= HEADER & NAVIGATION ================= -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#welcome" aria-label="Food Adventure! Go to the welcome page">
+        <span class="brand-mascot" data-benny="face" aria-hidden="true"></span>
+        <span class="brand-text">
+          <strong>FOOD ADVENTURE!</strong>
+          <small>Discover, Guess &amp; Match</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+        <span aria-hidden="true">☰</span> Menu
+      </button>
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#menu" data-nav="menu"><span aria-hidden="true">🏠</span> Home</a></li>
+          <li><a href="#discovery" data-nav="discovery"><span aria-hidden="true">📖</span> Food Discovery Book</a></li>
+          <li><a href="#matching" data-nav="matching"><span aria-hidden="true">🧩</span> Matching Challenge</a></li>
+          <li><a href="#speaking" data-nav="speaking"><span aria-hidden="true">🗣️</span> Speaking Corner</a></li>
+          <li><a href="#listening" data-nav="listening"><span aria-hidden="true">🎧</span> Listening Corner</a></li>
+          <li><a href="#quiz" data-nav="quiz"><span aria-hidden="true">🏆</span> Final Quiz</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="status-bar">
+      <div class="status-inner">
+        <p class="you-are-here">You are here: <strong id="current-section">Welcome</strong></p>
+        <div class="badge-progress" aria-live="polite">
+          <span class="badge-icons" id="badge-icons" aria-hidden="true"></span>
+          <span id="badge-text">Badges: 0 of 6</span>
+          <span class="meter" aria-hidden="true"><span id="badge-meter"></span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- ================= 1. WELCOME ================= -->
+    <section class="screen" id="screen-welcome" data-route="welcome" aria-labelledby="h-welcome">
+      <div class="hero">
+        <div class="hero-text">
+          <p class="eyebrow">Year 5 English · Topic: Food and Health</p>
+          <h1 id="h-welcome" tabindex="-1">WELCOME TO <span class="hl">FOOD ADVENTURE!</span></h1>
+          <p class="hero-sub">Discover, Guess &amp; Match</p>
+          <div class="speech-bubble hero-bubble">
+            <p>“Hello, Food Explorers! Are you ready to discover the wonderful world of food?”</p>
+            <button class="audio-btn" type="button" data-say="Hello, Food Explorers! Are you ready to discover the wonderful world of food?" data-audio="audio/instructions/welcome.mp3" aria-label="Listen to Chef Benny">🔊</button>
+          </div>
+          <p class="bm">Helo, Penjelajah Makanan! Adakah kamu bersedia untuk meneroka dunia makanan?</p>
+          <a class="btn btn-primary btn-xl" href="#objectives">START LEARNING <span aria-hidden="true">▶</span></a>
+        </div>
+        <div class="hero-art">
+          <div class="hero-blob" aria-hidden="true"></div>
+          <div class="mascot mascot-lg" data-benny="wave"></div>
+          <span class="float-food f1" aria-hidden="true">🍎</span>
+          <span class="float-food f2" aria-hidden="true">🥕</span>
+          <span class="float-food f3" aria-hidden="true">🍌</span>
+          <span class="float-food f4" aria-hidden="true">🥦</span>
+          <span class="float-food f5" aria-hidden="true">🍊</span>
+          <span class="float-food f6" aria-hidden="true">🥬</span>
+          <p class="mascot-name">Chef Benny</p>
+        </div>
+      </div>
+      <ul class="hero-strip" aria-label="What you will do">
+        <li><span aria-hidden="true">📖</span> Guess food words</li>
+        <li><span aria-hidden="true">🧩</span> Match pictures</li>
+        <li><span aria-hidden="true">🗣️</span> Talk with a partner</li>
+        <li><span aria-hidden="true">🎧</span> Listen carefully</li>
+      </ul>
+    </section>
+
+    <!-- ================= 2. OBJECTIVES ================= -->
+    <section class="screen" id="screen-objectives" data-route="objectives" aria-labelledby="h-objectives" hidden>
+      <div class="section-head theme-green">
+        <div class="mascot mascot-sm" data-benny="point"></div>
+        <div>
+          <p class="eyebrow">Introduction</p>
+          <h1 id="h-objectives" tabindex="-1">Today, You Will Learn To…</h1>
+          <p class="lead">Chef Benny has three speaking and vocabulary missions for you. Read them with your teacher.</p>
+          <p class="bm">Hari ini, kamu akan belajar untuk…</p>
+        </div>
+        <button class="btn btn-soft instr-btn" type="button" data-say="Today, you will learn to: One. Guess the meaning of unfamiliar food words from clues. Two. Describe food using suitable English statements. Three. Narrate a short story or event about a meal." data-audio="audio/instructions/missions.mp3"><span aria-hidden="true">🔊</span> Hear the missions</button>
+      </div>
+
+      <ol class="objective-list">
+        <li class="objective-card oc-orange">
+          <span class="obj-icon" aria-hidden="true">🔍</span>
+          <span class="obj-num">Mission 1</span>
+          <h2>Guess the meaning of unfamiliar food words.</h2>
+          <p>Use clues from words you already know to work out the meaning.</p>
+          <p class="obj-where">Learning Standard: 1.3.1 · Food Discovery Book</p>
+        </li>
+        <li class="objective-card oc-yellow">
+          <span class="obj-icon" aria-hidden="true">💬</span>
+          <span class="obj-num">Mission 2</span>
+          <h2>Describe food using suitable statements.</h2>
+          <p>Tell a partner about a food's colour, shape, taste or other features using simple English sentences.</p>
+          <p class="obj-where">Learning Standard: 2.1.5 · Speaking Corner</p>
+        </li>
+        <li class="objective-card oc-blue">
+          <span class="obj-icon" aria-hidden="true">👂</span>
+          <span class="obj-num">Mission 3</span>
+          <h2>Narrate a short story or event about a meal.</h2>
+          <p>Tell a partner about a meal or food-related event in a few simple sentences.</p>
+          <p class="obj-where">Learning Standard: 2.3.1 · Speaking Corner</p>
+        </li>
+      </ol>
+
+      <div class="cta-row">
+        <a class="btn btn-primary btn-lg" href="#menu">Go to the Main Menu <span aria-hidden="true">▶</span></a>
+      </div>
+
+      <details class="teacher-panel">
+        <summary><span aria-hidden="true">🍎</span> For Teachers: Curriculum Alignment &amp; Design Notes</summary>
+        <div class="teacher-body">
+          <h2>Instructional objectives</h2>
+          <p>By the end of the lesson, pupils will be able to:</p>
+          <ol>
+            <li><strong>Listening / vocabulary strategy:</strong> guess the meaning of at least <strong>three</strong> unfamiliar food-related words from clues provided by other known words (LS 1.3.1).</li>
+            <li><strong>Speaking – describing:</strong> describe a food item using at least <strong>three</strong> suitable statements about its colour, shape, taste or features (LS 2.1.5).</li>
+            <li><strong>Speaking – narrating:</strong> narrate a short basic story or event about a meal or food-related experience using simple, sequenced sentences (LS 2.3.1).</li>
+            <li><strong>Listening extension:</strong> identify TRUE or FALSE information after listening to Sarah's healthy-eating interview. This is additional listening practice and is not mapped to one of the three LS codes supplied.</li>
+          </ol>
+
+          <h2>Content Standards</h2>
+          <ul class="standards">
+            <li><span class="code">1.3</span> Use appropriate listening strategies in a variety of contexts.</li>
+            <li><span class="code">2.1</span> Communicate simple information intelligibly.</li>
+            <li><span class="code">2.3</span> Communicate appropriately to a small or large group.</li>
+          </ul>
+
+          <h2>Learning Standards</h2>
+          <ul class="standards">
+            <li><span class="code">1.3.1</span> Guess the meaning of unfamiliar words from clues provided by other known words.</li>
+            <li><span class="code">2.1.5</span> Describe people, places, and objects using suitable statements.</li>
+            <li><span class="code">2.3.1</span> Narrate short basic stories and events.</li>
+          </ul>
+
+          <h2>Activity map</h2>
+          <p class="note">The map distinguishes activities that directly practise the supplied Learning Standards from activities that provide additional reinforcement.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th scope="col">Activity</th><th scope="col">Learning focus</th><th scope="col">Content Standard</th><th scope="col">Learning Standard</th></tr></thead>
+              <tbody>
+                <tr><td>Food Discovery Book (Guess – Flip – Check)</td><td>Infer food-word meanings from clues</td><td>1.3</td><td>1.3.1</td></tr>
+                <tr><td>Vocabulary Checkpoint</td><td>Use known-word clues to identify unfamiliar food words</td><td>1.3</td><td>1.3.1</td></tr>
+                <tr><td>Food Matching Challenge</td><td>Reinforce food-word and picture recognition</td><td>2.1</td><td>Supporting practice; not a direct assessment of the supplied LS codes</td></tr>
+                <tr><td>Speaking Corner – Food Description</td><td>Describe a food item using suitable statements</td><td>2.1</td><td>2.1.5</td></tr>
+                <tr><td>Speaking Corner – Meal Story</td><td>Narrate a short food-related event</td><td>2.3</td><td>2.3.1</td></tr>
+                <tr><td>Listening Corner – Healthy Eating Interview</td><td>Listen for specific information (extension)</td><td>1.3</td><td>Not directly assessed by the three supplied LS codes</td></tr>
+                <tr><td>Final Food Explorer Quiz</td><td>Answer vocabulary and listening questions</td><td>1.3, 2.1</td><td>1.3.1 (vocabulary items only)</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2>Multimedia modes</h2>
+          <ul class="mode-grid">
+            <li><strong>Visual</strong> food illustrations, flashcards, icons, colour-coded sections.</li>
+            <li><strong>Linguistic</strong> vocabulary, contextual clues, Malay translations, example sentences.</li>
+            <li><strong>Audio</strong> supports pre-recorded narration when audio files are supplied, with browser text-to-speech as a fallback.</li>
+            <li><strong>Spatial</strong> consistent card layout, grouped content, clear navigation.</li>
+            <li><strong>Gestural</strong> clicking, flipping, selecting, matching and navigating.</li>
+            <li><strong>Digital</strong> animated flashcards, instant feedback, scoring and badge progress.</li>
+          </ul>
+
+          <h2>Design principles</h2>
+          <p><strong>Multimedia learning:</strong> words and pictures sit together, content is split into small steps, and pupils control the pace. <strong>CASPER:</strong> strong colour contrast, aligned cards, simple screens, related items grouped close together, key words emphasised and the same layout repeated in every section. <strong>Accessibility:</strong> large fonts, keyboard navigation, visible focus outlines, text alternatives and short Bahasa Melayu support lines.</p>
+          <p class="note">Privacy: no accounts, no log-in and no personal information. Progress badges are saved only in this browser and can be cleared on the completion page.</p>
+        </div>
+      </details>
+    </section>
+
+    <!-- ================= 3. DASHBOARD / MAIN MENU ================= -->
+    <section class="screen" id="screen-menu" data-route="menu" aria-labelledby="h-menu" hidden>
+      <div class="section-head theme-cream">
+        <div class="mascot mascot-sm" data-benny="wave"></div>
+        <div>
+          <p class="eyebrow">Main Menu</p>
+          <h1 id="h-menu" tabindex="-1">Choose Your Food Adventure!</h1>
+          <p class="lead">Start with the Food Discovery Book, then try every activity. Collect all six badges!</p>
+          <p class="bm">Pilih satu aktiviti. Kumpul semua lencana!</p>
+        </div>
+      </div>
+
+      <div class="dash-grid">
+        <a class="dash-card dc-orange" href="#discovery">
+          <span class="dash-step">Activity 1</span>
+          <span class="dash-emoji" aria-hidden="true">📖</span>
+          <h2>Food Discovery Book</h2>
+          <p>Guess – Flip – Check! Read clues, guess the word, then flip the card.</p>
+          <span class="dash-skill">Vocabulary</span>
+          <span class="dash-status" data-status="discovery"></span>
+        </a>
+        <a class="dash-card dc-blue" href="#matching">
+          <span class="dash-step">Activity 2</span>
+          <span class="dash-emoji" aria-hidden="true">🧩</span>
+          <h2>Food Matching Challenge</h2>
+          <p>Click a picture, then click its English word. Two rounds!</p>
+          <span class="dash-skill">Vocabulary</span>
+          <span class="dash-status" data-status="matching"></span>
+        </a>
+        <a class="dash-card dc-yellow" href="#speaking">
+          <span class="dash-step">Activity 3</span>
+          <span class="dash-emoji" aria-hidden="true">🗣️</span>
+          <h2>Speaking Corner</h2>
+          <p>Ask and answer questions about food with a partner.</p>
+          <span class="dash-skill">Speaking</span>
+          <span class="dash-status" data-status="speaking"></span>
+        </a>
+        <a class="dash-card dc-green" href="#listening">
+          <span class="dash-step">Activity 4</span>
+          <span class="dash-emoji" aria-hidden="true">🎧</span>
+          <h2>Listening Corner</h2>
+          <p>Listen to Sarah's interview and choose TRUE or FALSE.</p>
+          <span class="dash-skill">Listening</span>
+          <span class="dash-status" data-status="listening"></span>
+        </a>
+      </div>
+
+      <div class="dash-extra">
+        <a class="extra-card" href="#checkpoint">
+          <span aria-hidden="true">✅</span>
+          <span><strong>Vocabulary Checkpoint</strong><small>5 quick questions after the flashcards</small></span>
+          <span class="dash-status" data-status="checkpoint"></span>
+        </a>
+        <a class="extra-card extra-quiz" href="#quiz">
+          <span aria-hidden="true">🏆</span>
+          <span><strong>Final Food Explorer Quiz</strong><small>10 questions to finish your adventure</small></span>
+          <span class="dash-status" data-status="quiz"></span>
+        </a>
+        <a class="extra-card extra-soft" href="#objectives">
+          <span aria-hidden="true">🎯</span>
+          <span><strong>Learning Objectives</strong><small>See today's three missions</small></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= 4. FOOD DISCOVERY BOOK ================= -->
+    <section class="screen" id="screen-discovery" data-route="discovery" aria-labelledby="h-discovery" hidden>
+      <div class="section-head theme-orange">
+        <div class="mascot mascot-sm" data-benny="point"></div>
+        <div>
+          <p class="eyebrow">Activity 1 · Vocabulary</p>
+          <h1 id="h-discovery" tabindex="-1">FOOD DISCOVERY BOOK</h1>
+          <p class="subtitle">GUESS <span aria-hidden="true">–</span> FLIP <span aria-hidden="true">–</span> CHECK</p>
+          <p class="lead">1. Read the three clues. 2. Guess what the word means. 3. Flip the card to check the Malay meaning.</p>
+          <p class="bm">Baca petunjuk, teka maksud perkataan, kemudian terbalikkan kad untuk menyemak.</p>
+        </div>
+        <button class="btn btn-soft instr-btn" type="button" data-say="Read the three clues. Guess what the word means. Then flip the card to check the Malay meaning."><span aria-hidden="true">🔊</span> Hear instructions</button>
+      </div>
+
+      <div class="fc-progress">
+        <div class="fc-progress-top">
+          <span>Cards checked: <strong id="fc-checked">0</strong> / 10</span>
+          <span class="fc-guess-count">Correct guesses: <strong id="fc-guess-count">0</strong></span>
+        </div>
+        <div class="meter meter-lg" aria-hidden="true"><span id="fc-meter"></span></div>
+        <div class="fc-dots" id="fc-dots" role="group" aria-label="Jump to a card"></div>
+      </div>
+
+      <div class="flashcard-stage">
+        <div class="flashcard" id="flashcard" aria-live="polite"></div>
+      </div>
+
+      <div class="card-nav">
+        <button class="btn btn-soft" type="button" id="fc-prev"><span aria-hidden="true">◀</span> Previous</button>
+        <span class="card-counter" id="fc-counter" aria-live="polite">1 / 10</span>
+        <button class="btn btn-soft" type="button" id="fc-next">Next <span aria-hidden="true">▶</span></button>
+      </div>
+
+      <div class="callout" id="fc-done" hidden>
+        <div class="mascot mascot-xs" data-benny="cheer"></div>
+        <div>
+          <h2>Wonderful! You checked all ten cards!</h2>
+          <p>Now let's see what you remember.</p>
+        </div>
+        <a class="btn btn-primary" href="#checkpoint">Go to the Checkpoint <span aria-hidden="true">▶</span></a>
+      </div>
+      <p class="center-note"><a href="#checkpoint">Ready already? Skip to the Vocabulary Checkpoint →</a></p>
+    </section>
+
+    <!-- ================= 5. CHECKPOINT ================= -->
+    <section class="screen" id="screen-checkpoint" data-route="checkpoint" aria-labelledby="h-checkpoint" hidden>
+      <div class="section-head theme-orange">
+        <div class="mascot mascot-sm" data-benny="point"></div>
+        <div>
+          <p class="eyebrow">Vocabulary Checkpoint</p>
+          <h1 id="h-checkpoint" tabindex="-1">LET'S CHECK WHAT YOU HAVE LEARNED!</h1>
+          <p class="lead">Read the clue. Choose ONE answer. Then click <strong>Check Answer</strong>.</p>
+          <p class="bm">Baca petunjuk dan pilih satu jawapan sahaja.</p>
+        </div>
+        <button class="btn btn-soft instr-btn" type="button" data-say="Read the clue. Choose one answer. Then click Check Answer."><span aria-hidden="true">🔊</span> Hear instructions</button>
+      </div>
+      <div class="panel quiz-panel" id="checkpoint-app"></div>
+    </section>
+
+    <!-- ================= 6. MATCHING ================= -->
+    <section class="screen" id="screen-matching" data-route="matching" aria-labelledby="h-matching" hidden>
+      <div class="section-head theme-blue">
+        <div class="mascot mascot-sm" data-benny="point"></div>
+        <div>
+          <p class="eyebrow">Activity 2 · Vocabulary</p>
+          <h1 id="h-matching" tabindex="-1">FOOD MATCHING CHALLENGE!</h1>
+          <p class="lead">1. Click a <strong>picture</strong>. 2. Click the <strong>English word</strong> that matches it.</p>
+          <p class="bm">Klik gambar, kemudian klik perkataan yang sepadan.</p>
+        </div>
+        <button class="btn btn-soft instr-btn" type="button" data-say="Click a picture. Then click the English word that matches it."><span aria-hidden="true">🔊</span> Hear instructions</button>
+      </div>
+
+      <div class="match-toolbar" role="group" aria-label="Game controls">
+        <button class="btn btn-tab" type="button" data-round="0" aria-pressed="true">ROUND ONE</button>
+        <button class="btn btn-tab" type="button" data-round="1" aria-pressed="false">ROUND TWO</button>
+        <button class="btn btn-soft" type="button" id="match-restart"><span aria-hidden="true">🔄</span> RESTART</button>
+        <a class="btn btn-soft" href="#menu"><span aria-hidden="true">🏠</span> HOME</a>
+      </div>
+
+      <div class="panel match-panel">
+        <div class="match-score">
+          <span id="match-round-title">Round One</span>
+          <span>Correct matches: <strong id="match-correct">0</strong> / 3</span>
+          <span>Tries: <strong id="match-tries">0</strong></span>
+        </div>
+        <div class="match-board">
+          <div class="match-col">
+            <h2 class="col-title"><span aria-hidden="true">🖼️</span> Pictures</h2>
+            <div class="match-list" id="match-pictures"></div>
+          </div>
+          <div class="match-col">
+            <h2 class="col-title"><span aria-hidden="true">🔤</span> English Words</h2>
+            <div class="match-list" id="match-words"></div>
+          </div>
+        </div>
+        <p class="feedback" id="match-feedback" role="status" aria-live="polite">Start by clicking a picture.</p>
+        <div class="round-result" id="match-result" hidden></div>
+      </div>
+    </section>
+
+    <!-- ================= 7. SPEAKING ================= -->
+    <section class="screen" id="screen-speaking" data-route="speaking" aria-labelledby="h-speaking" hidden>
+      <div class="section-head theme-yellow">
+        <div class="mascot mascot-sm" data-benny="wave"></div>
+        <div>
+          <p class="eyebrow">Activity 3 · Speaking</p>
+          <h1 id="h-speaking" tabindex="-1">LET'S TALK ABOUT FOOD!</h1>
+          <p class="lead">Work with a partner. Ask and answer questions about what you eat and drink.</p>
+          <p class="bm">Tanya dan jawab soalan tentang tabiat makan bersama rakan kamu.</p>
+        </div>
+        <button class="btn btn-soft instr-btn" type="button" data-say="Work with a partner. Ask and answer questions about what you eat and drink."><span aria-hidden="true">🔊</span> Hear instructions</button>
+      </div>
+
+      <p class="honest-note"><span aria-hidden="true">💡</span> This page helps you prepare and practise. It does <strong>not</strong> record or mark your voice. Your partner and teacher will listen to you!</p>
+
+      <div class="speak-layout">
+        <div class="speak-main">
+          <div class="panel">
+            <h2 class="panel-title"><span aria-hidden="true">📝</span> Describe and Tell a Short Story</h2>
+            <p class="panel-help"><strong>Describe (LS 2.1.5):</strong> Choose a food and describe it using at least three suitable statements. You can talk about its colour, shape, taste and texture.</p>
+            <p class="panel-help"><strong>Example:</strong> “A mango is a yellow or orange fruit. It is oval-shaped. It tastes sweet and juicy.”</p>
+            <p class="panel-help"><strong>Narrate (LS 2.3.1):</strong> Tell your partner about a meal or food-related event. Say what happened first, next and last.</p>
+            <p class="panel-help"><strong>Example:</strong> “Yesterday, I had dinner with my family. First, we prepared the food. Then, we ate rice and chicken together. After dinner, we had watermelon.”</p>
+          </div>
+          <div class="panel">
+            <h2 class="panel-title"><span aria-hidden="true">❓</span> Interview Questions</h2>
+            <p class="panel-help">Click 🔊 to hear a question. Click <em>Example answer</em> if you need help.</p>
+            <ol class="question-bubbles" id="speak-questions"></ol>
+          </div>
+
+          <div class="panel">
+            <h2 class="panel-title"><span aria-hidden="true">✏️</span> Sentence Starters</h2>
+            <p class="panel-help">Use these to begin your answer. Click one to hear it.</p>
+            <ul class="starter-list" id="speak-starters"></ul>
+          </div>
+
+          <div class="panel pair-panel">
+            <h2 class="panel-title"><span aria-hidden="true">👫</span> Pair Interview</h2>
+            <div class="role-banner" id="role-banner" aria-live="polite"></div>
+            <ol class="steps" id="pair-steps">
+              <li data-step="0"><span class="step-num">Step 1</span><p><strong>Student A</strong> asks Student B <strong>three or more</strong> questions.</p></li>
+              <li data-step="1"><span class="step-num">Step 2</span><p><strong>Student B</strong> answers using simple English sentences.</p></li>
+              <li data-step="2"><span class="step-num">Step 3</span><p><strong>Swap roles!</strong> Now Student B asks and Student A answers.</p></li>
+              <li data-step="3"><span class="step-num">Step 4</span><p><strong>Share</strong> what your partner usually eats with the class or your group.</p></li>
+            </ol>
+            <div class="step-controls">
+              <button class="btn btn-soft" type="button" id="step-prev"><span aria-hidden="true">◀</span> Previous step</button>
+              <button class="btn btn-primary" type="button" id="step-next">Next step <span aria-hidden="true">▶</span></button>
+            </div>
+
+            <div class="tracker">
+              <h3>Questions we asked</h3>
+              <p class="panel-help">Tick each question after you ask it.</p>
+              <ul class="tick-list" id="asked-list"></ul>
+              <p class="feedback" id="asked-feedback" role="status" aria-live="polite">Ask at least 3 questions.</p>
+            </div>
+
+            <div class="share-builder">
+              <h3>Step 4 helper: Share about your partner</h3>
+              <p class="built-sentence">
+                <label class="sr-only" for="share-food">Food</label>
+                My partner usually eats
+                <select id="share-food"></select>
+                for
+                <label class="sr-only" for="share-meal">Meal</label>
+                <select id="share-meal"></select>.
+              </p>
+              <button class="btn btn-soft" type="button" id="share-say"><span aria-hidden="true">🔊</span> Hear my sentence</button>
+            </div>
+          </div>
+        </div>
+
+        <aside class="speak-side">
+          <div class="panel support-panel">
+            <h2 class="panel-title"><span aria-hidden="true">🧰</span> Word Helper</h2>
+            <p class="panel-help">Useful words with Bahasa Melayu meanings.</p>
+            <ul class="vocab-list" id="speak-vocab"></ul>
+          </div>
+
+          <div class="panel checklist-panel">
+            <h2 class="panel-title"><span aria-hidden="true">🌟</span> My Speaking Confidence</h2>
+            <p class="panel-help">Tick the boxes when you are ready.</p>
+            <ul class="tick-list" id="confidence-list">
+              <li><label><input type="checkbox" value="ask"> <span>I can ask questions.</span></label></li>
+              <li><label><input type="checkbox" value="answer"> <span>I can answer questions.</span></label></li>
+              <li><label><input type="checkbox" value="simple"> <span>I can speak using simple English sentences.</span></label></li>
+            </ul>
+            <p class="feedback" id="confidence-feedback" role="status" aria-live="polite"></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ================= 8. LISTENING ================= -->
+    <section class="screen" id="screen-listening" data-route="listening" aria-labelledby="h-listening" hidden>
+      <div class="section-head theme-green">
+        <div class="mascot mascot-sm" data-benny="point"></div>
+        <div>
+          <p class="eyebrow">Activity 4 · Listening</p>
+          <h1 id="h-listening" tabindex="-1">LISTEN CAREFULLY!</h1>
+          <p class="subtitle">Healthy Eating Interview</p>
+          <p class="lead">Listen to an interview with Sarah, a Year 5 pupil. Then choose TRUE or FALSE. You can listen again and again!</p>
+          <p class="bm">Dengar temu bual, kemudian pilih BETUL (TRUE) atau SALAH (FALSE).</p>
+        </div>
+        <button class="btn btn-soft instr-btn" type="button" data-say="Listen to an interview with Sarah. Then choose true or false. You can listen again."><span aria-hidden="true">🔊</span> Hear instructions</button>
+      </div>
+
+      <div class="listen-layout">
+        <div class="panel player-panel">
+          <h2 class="panel-title"><span aria-hidden="true">📻</span> Interview Player</h2>
+          <p class="panel-help">The player uses the same pre-recorded interview clips on every device when they are available. If a clip has not been added yet, it uses the browser's English voice as a fallback.</p>
+          <div class="speakers" aria-hidden="true">
+            <div class="speaker" id="spk-Interviewer"><span class="spk-face">🧒🏽</span><span>Interviewer</span></div>
+            <div class="sound-wave" id="sound-wave"><i></i><i></i><i></i><i></i><i></i></div>
+            <div class="speaker" id="spk-Sarah"><span class="spk-face">👧🏻</span><span>Sarah</span></div>
+          </div>
+          <p class="now-playing" id="now-playing" role="status" aria-live="polite">Press PLAY to start the interview.</p>
+          <div class="meter meter-lg" aria-hidden="true"><span id="audio-meter"></span></div>
+          <div class="player-controls">
+            <button class="btn btn-primary" type="button" id="audio-play"><span aria-hidden="true">▶</span> PLAY</button>
+            <button class="btn btn-soft" type="button" id="audio-pause" disabled><span aria-hidden="true">⏸</span> PAUSE</button>
+            <button class="btn btn-soft" type="button" id="audio-replay"><span aria-hidden="true">🔁</span> REPLAY</button>
+          </div>
+          <div class="player-settings">
+            <label for="voice-select">Voice (browser fallback)</label>
+            <select id="voice-select"><option value="">Default English voice</option></select>
+            <label for="rate-select">Speed</label>
+            <select id="rate-select">
+              <option value="0.75">Slow</option>
+              <option value="0.9" selected>Normal</option>
+              <option value="1.05">Fast</option>
+            </select>
+          </div>
+          <p class="listen-count">Times listened: <strong id="listen-count">0</strong></p>
+          <p class="tts-warning" id="tts-warning" hidden><span aria-hidden="true">⚠️</span> This browser cannot play the voice. Ask your teacher to read the interview aloud, or open the transcript below.</p>
+
+          <div class="transcript-box">
+            <button class="btn btn-soft" type="button" id="transcript-toggle" aria-expanded="false" aria-controls="transcript" disabled><span aria-hidden="true">📄</span> Show transcript</button>
+            <p class="panel-help" id="transcript-lock">The transcript unlocks after you submit your answers.</p>
+            <ol class="transcript" id="transcript" hidden></ol>
+          </div>
+        </div>
+
+        <div class="panel tf-panel">
+          <h2 class="panel-title"><span aria-hidden="true">✔️</span> TRUE or FALSE?</h2>
+          <p class="panel-help">Choose one answer for each sentence.</p>
+          <form id="tf-form" novalidate>
+            <ol class="tf-list" id="tf-list"></ol>
+            <p class="feedback" id="tf-feedback" role="status" aria-live="polite"></p>
+            <div class="tf-actions">
+              <button class="btn btn-primary" type="submit" id="tf-submit">Submit Answers</button>
+              <button class="btn btn-soft" type="button" id="tf-retry" hidden><span aria-hidden="true">🔄</span> RETRY</button>
+              <button class="btn btn-soft" type="button" id="tf-replay-audio"><span aria-hidden="true">🔁</span> Replay audio</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 9. FINAL QUIZ ================= -->
+    <section class="screen" id="screen-quiz" data-route="quiz" aria-labelledby="h-quiz" hidden>
+      <div class="section-head theme-mix">
+        <div class="mascot mascot-sm" data-benny="point"></div>
+        <div>
+          <p class="eyebrow">Final Assessment</p>
+          <h1 id="h-quiz" tabindex="-1">FINAL FOOD EXPLORER QUIZ</h1>
+          <p class="lead">Answer ten questions. Use <strong>Next</strong> and <strong>Previous</strong> to move. Click <strong>Submit Quiz</strong> at the end.</p>
+          <p class="bm">Jawab sepuluh soalan. Pilih satu jawapan untuk setiap soalan.</p>
+        </div>
+        <button class="btn btn-soft instr-btn" type="button" data-say="Answer ten questions. Use next and previous to move. Click submit quiz at the end."><span aria-hidden="true">🔊</span> Hear instructions</button>
+      </div>
+      <div class="panel quiz-panel" id="quiz-app"></div>
+    </section>
+
+    <!-- ================= 10. COMPLETION ================= -->
+    <section class="screen" id="screen-complete" data-route="complete" aria-labelledby="h-complete" hidden>
+      <div class="confetti" aria-hidden="true"></div>
+      <div class="complete-hero">
+        <div class="complete-art">
+          <span class="float-food f1" aria-hidden="true">🍓</span>
+          <span class="float-food f3" aria-hidden="true">🍉</span>
+          <div class="mascot mascot-lg" data-benny="cheer"></div>
+          <span class="float-food f2" aria-hidden="true">🥕</span>
+          <span class="float-food f4" aria-hidden="true">🍇</span>
+        </div>
+        <div>
+          <p class="eyebrow">Adventure complete</p>
+          <h1 id="h-complete" tabindex="-1">CONGRATULATIONS, FOOD EXPLORER!</h1>
+          <div class="speech-bubble">
+            <p>“Great job, Food Explorer! You have discovered new food words, practised speaking and improved your listening skills. Keep learning and keep speaking English!”</p>
+            <button class="audio-btn" type="button" data-say="Great job, Food Explorer! You have discovered new food words, practised speaking and improved your listening skills. Keep learning and keep speaking English!" aria-label="Listen to Chef Benny's message">🔊</button>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="summary-title">Your Adventure Summary</h2>
+      <ul class="summary-grid" id="summary-grid"></ul>
+
+      <div class="cta-row">
+        <a class="btn btn-primary btn-lg" href="#menu"><span aria-hidden="true">🏠</span> Back to Main Menu</a>
+        <button class="btn btn-soft btn-lg" type="button" id="repeat-all"><span aria-hidden="true">🔄</span> Repeat the Activities</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= BACK / NEXT ================= -->
+  <nav class="journey" aria-label="Back and next pages">
+    <div class="journey-inner">
+      <a class="btn btn-soft" id="journey-back" href="#welcome"><span aria-hidden="true">◀</span> <span class="jb-label">Back</span></a>
+      <span class="journey-step" id="journey-step">Page 1 of 10</span>
+      <a class="btn btn-primary" id="journey-next" href="#objectives"><span class="jn-label">Next</span> <span aria-hidden="true">▶</span></a>
+    </div>
+  </nav>
+
+  <footer class="site-footer">
+    <p>Food Adventure! · Year 5 English · Food and Health · Made for Malaysian classrooms. No log-in, no personal data.</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
